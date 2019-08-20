@@ -6,6 +6,8 @@ import VueRouter from 'vue-router'
 import App from './App'
 //样式重置
 import './assets/style/reset.css'
+//vuex
+import store from './store/index'
 //axios 封装
 import http from './api/http'
 import ports from './api/ports'
@@ -68,5 +70,6 @@ Vue.config.productionTip = false
 /* eslint-disable no-new */
 new Vue({
   router,
+  store,
   render: h => h(App)
 }).$mount('#app-box')

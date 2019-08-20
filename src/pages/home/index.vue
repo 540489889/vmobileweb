@@ -22,6 +22,7 @@
         this.http.get(this.ports.home.index,res=>{
           console.log(res)
         })
+        let self = this
         // 显示
         this.$vux.alert.show({
           title: 'Vux is Cool',
@@ -31,6 +32,7 @@
           },
           onHide () {
             console.log('Plugin: I\'m hiding')
+            self.$router.push('/hello')
           }
         })
       }

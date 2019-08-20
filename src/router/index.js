@@ -4,7 +4,7 @@ import HelloWorld from '@/components/HelloWorld'
 
 Vue.use(Router)
 let router = new Router({
-  // mode: 'history',
+  mode: 'history',
   routes: [
     // {
     //   path: '/',
@@ -16,6 +16,12 @@ let router = new Router({
       path: '/',
       name: 'Home',
       component: resolve => require(['@/pages/home/index'], resolve) ,
+      meta:{index: 1, title: '首页', requireAuth: false}
+    },
+    {
+      path: '/hello',
+      name: 'Hello',
+      component: resolve => require(['@/components/HelloWorld'], resolve) ,
       meta:{index: 1, title: '首页', requireAuth: false}
     },
   ]
