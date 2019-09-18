@@ -28,7 +28,10 @@
           title: 'Vux is Cool',
           content: 'Do you agree?',
           onShow () {
-            console.log('Plugin: I\'m showing')
+            // 显示
+            self.$vux.loading.show({
+              text: 'Loading'
+            })
           },
           onHide () {
             console.log('Plugin: I\'m hiding')

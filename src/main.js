@@ -57,9 +57,10 @@ axios.defaults.withCredentials=true;
 //   return Promise.reject(error)
 // })
 //vux
-import { AlertPlugin, ToastPlugin } from 'vux'
+import { AlertPlugin, ToastPlugin, LoadingPlugin } from 'vux'
 Vue.use(AlertPlugin)
 Vue.use(ToastPlugin)
+Vue.use(LoadingPlugin)
 
 Vue.use(VueRouter)
 import router from './router'

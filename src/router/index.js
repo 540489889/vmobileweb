@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import store from '../store'
 import HelloWorld from '@/components/HelloWorld'
 
 Vue.use(Router)
@@ -26,4 +27,14 @@ let router = new Router({
     },
   ]
 })
+router.beforeEach(function (to, from, next) {
+  store.commit('updateLoadingStatus', {isLoading: true})
+  next()
+})
+router.afterEach(function (to) {
+  setTimeout(()=>{
+    store.commit('updateLoadingStatus', {isLoading: false})
+  },500)
+})
+
 export default router

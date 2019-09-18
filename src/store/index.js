@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 Vue.use(Vuex)
-export default new Vuex.Store({
+const store = new Vuex.Store({
   state: {
     // AuthorizedUrl: 'http://192.168.137.1:8081/author/index',//授权地址
     AuthorizedUrl: 'http://yj.svkeji.cn/author/index',
@@ -41,3 +41,14 @@ export default new Vuex.Store({
     // }
   }
 })
+store.registerModule('vux', {
+  state: {
+    isLoading: false
+  },
+  mutations: {
+    updateLoadingStatus (state, payload) {
+      state.isLoading = payload.isLoading
+    }
+  }
+})
+export default store
