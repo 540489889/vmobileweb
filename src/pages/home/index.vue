@@ -29,9 +29,9 @@
           content: 'Do you agree?',
           onShow () {
             // 显示
-            self.$vux.loading.show({
-              text: 'Loading'
-            })
+            // self.$vux.loading.show({
+            //   text: 'Loading'
+            // })
           },
           onHide () {
             console.log('Plugin: I\'m hiding')
